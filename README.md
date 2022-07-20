@@ -2,7 +2,7 @@
 
 The Exchange Tracker of the [Sim Companies](www.simcompanies.com) on .NET 6.0 platform, based on [Web API](www.simcompanies.com/articles/api). 
 
-![screenshot](https://github.com/bac0id/simcompanies-exchange-tracker/blob/master/screenshot-1.png?raw=true)
+![screenshot](screenshot-1.png)
 
 ## How to use
 
@@ -15,6 +15,6 @@ The Exchange Tracker of the [Sim Companies](www.simcompanies.com) on .NET 6.0 pl
 
 This repository is under MIT License. 
 
-![icon](d1fxy698ilbz6u.cloudfront.net/static/images/favico/favicon.ico)
+![icon](http://d1fxy698ilbz6u.cloudfront.net/static/images/favico/favicon.ico)
 
 The icon of runnable file is licensed by Sim Companies. 
