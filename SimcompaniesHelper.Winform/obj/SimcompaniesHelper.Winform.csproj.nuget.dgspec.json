@@ -1,0 +1,129 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Winform\\SimcompaniesHelper.Winform.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Core\\SimcompaniesHelper.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Core\\SimcompaniesHelper.Core.csproj",
+        "projectName": "SimcompaniesHelper.Core",
+        "projectPath": "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Core\\SimcompaniesHelper.Core.csproj",
+        "packagesPath": "C:\\Users\\makes\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\makes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Winform\\SimcompaniesHelper.Winform.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Winform\\SimcompaniesHelper.Winform.csproj",
+        "projectName": "Sim Companies Exchange Tracker",
+        "projectPath": "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Winform\\SimcompaniesHelper.Winform.csproj",
+        "packagesPath": "C:\\Users\\makes\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Winform\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\makes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Core\\SimcompaniesHelper.Core.csproj": {
+                "projectPath": "D:\\Projects\\simcompanies-helper\\SimcompaniesHelper.Core\\SimcompaniesHelper.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "ScottPlot.WinForms": {
+              "target": "Package",
+              "version": "[4.1.52, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
