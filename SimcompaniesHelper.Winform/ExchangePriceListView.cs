@@ -2,9 +2,27 @@
 
 namespace SimcompaniesHelper.Winform {
 	public class ExchangePriceListView {
+		public ICollection<int> Ids {
+			get => this.ids;
+			set {
+				foreach (var id1 in ids) {
+					// if new Ids doesn't contains some id of original ids
+					// that is to say, if id1 is deleted from original ids
+					if (value.Contains(id1) == false) {
+						// then remove its ListViewItem
+						if (idToLvItem.ContainsKey(id1)) {
+							ListViewItem item = idToLvItem[id1];
+							lv.Items.Remove(item);
+							idToLvItem.Remove(id1);
+						}
+					}
+				}
+				this.ids = value;
+			}
+		}
 
-		public ICollection<int> Ids { get; set; }
 
+		private ICollection<int> ids;
 		private ListView lv;
 		private Exchange exchange;
 		private IDictionary<int, ListViewItem> idToLvItem = new Dictionary<int, ListViewItem>();
@@ -16,7 +34,7 @@ namespace SimcompaniesHelper.Winform {
 		public ExchangePriceListView(ListView lv, Exchange exchange, ICollection<int> ids) {
 			this.lv = lv ?? throw new ArgumentNullException(nameof(lv));
 			this.exchange = exchange ?? throw new ArgumentNullException(nameof(exchange));
-			this.Ids = ids;
+			this.ids = ids ?? throw new ArgumentNullException(nameof(ids));
 			this.lv.Items.Clear();
 		}
 

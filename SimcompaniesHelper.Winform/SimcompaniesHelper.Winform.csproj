@@ -8,13 +8,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <PackageId>Sim Companies Exchange Tracker</PackageId>
-    <AssemblyVersion>0.9.0.0</AssemblyVersion>
-    <FileVersion>0.9.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
     <Product>Sim Companies Exchange Tracker</Product>
     <Company>bac0id</Company>
 		<Copyright>MIT License</Copyright>
 		<AssemblyTitle>Simcompanies Market Monitor</AssemblyTitle>
 		<Description>Track real time exchange!
+
+Project homepage: https://github.com/bac0id/simcompanies-exchange-tracker/
 
 Initial version made by BAC Inst. of Microelectronics. Contact us at www.simcompanies.com/company/0/BAC-Inst.-of-Microelectronics/
 
@@ -32,6 +34,33 @@ The license of the icon of this program is owned by Sim Companies.</Description>
 
   <ItemGroup>
     <ProjectReference Include="..\SimcompaniesHelper.Core\SimcompaniesHelper.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

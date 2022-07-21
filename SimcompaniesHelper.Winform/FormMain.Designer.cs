@@ -49,13 +49,10 @@
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.editListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.inportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItemAutoRefresh = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItemTopMost = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,7 +90,7 @@
 			this.lvPriceListView.Location = new System.Drawing.Point(0, 0);
 			this.lvPriceListView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.lvPriceListView.Name = "lvPriceListView";
-			this.lvPriceListView.Size = new System.Drawing.Size(516, 326);
+			this.lvPriceListView.Size = new System.Drawing.Size(543, 326);
 			this.lvPriceListView.TabIndex = 0;
 			this.lvPriceListView.UseCompatibleStateImageBehavior = false;
 			this.lvPriceListView.View = System.Windows.Forms.View.Details;
@@ -153,38 +150,31 @@
             this.toolStripMenuItem4});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(516, 25);
+			this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+			this.menuStrip1.Size = new System.Drawing.Size(543, 25);
 			this.menuStrip1.TabIndex = 6;
 			this.menuStrip1.Text = "Menu";
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editListToolStripMenuItem,
             this.inportToolStripMenuItem,
             this.exportToolStripMenuItem});
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
 			this.toolStripMenuItem1.Size = new System.Drawing.Size(47, 21);
 			this.toolStripMenuItem1.Text = "Data";
 			// 
-			// editListToolStripMenuItem
-			// 
-			this.editListToolStripMenuItem.Name = "editListToolStripMenuItem";
-			this.editListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.editListToolStripMenuItem.Text = "Edit Follow List";
-			this.editListToolStripMenuItem.Click += new System.EventHandler(this.editListToolStripMenuItem_Click);
-			// 
 			// inportToolStripMenuItem
 			// 
 			this.inportToolStripMenuItem.Name = "inportToolStripMenuItem";
-			this.inportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.inportToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
 			this.inportToolStripMenuItem.Text = "Load history";
 			this.inportToolStripMenuItem.Click += new System.EventHandler(this.inportToolStripMenuItem_Click);
 			// 
 			// exportToolStripMenuItem
 			// 
 			this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-			this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.exportToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
 			this.exportToolStripMenuItem.Text = "Save history";
 			this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
 			// 
@@ -197,32 +187,10 @@
 			// 
 			// toolStripMenuItem3
 			// 
-			this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemAutoRefresh,
-            this.toolStripMenuItemTopMost});
 			this.toolStripMenuItem3.Name = "toolStripMenuItem3";
 			this.toolStripMenuItem3.Size = new System.Drawing.Size(58, 21);
 			this.toolStripMenuItem3.Text = "Config";
-			// 
-			// toolStripMenuItemAutoRefresh
-			// 
-			this.toolStripMenuItemAutoRefresh.Checked = true;
-			this.toolStripMenuItemAutoRefresh.CheckOnClick = true;
-			this.toolStripMenuItemAutoRefresh.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.toolStripMenuItemAutoRefresh.Name = "toolStripMenuItemAutoRefresh";
-			this.toolStripMenuItemAutoRefresh.Size = new System.Drawing.Size(151, 22);
-			this.toolStripMenuItemAutoRefresh.Text = "Auto Refresh";
-			this.toolStripMenuItemAutoRefresh.CheckedChanged += new System.EventHandler(this.toolStripMenuItemAutoRefresh_CheckedChanged);
-			// 
-			// toolStripMenuItemTopMost
-			// 
-			this.toolStripMenuItemTopMost.Checked = true;
-			this.toolStripMenuItemTopMost.CheckOnClick = true;
-			this.toolStripMenuItemTopMost.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.toolStripMenuItemTopMost.Name = "toolStripMenuItemTopMost";
-			this.toolStripMenuItemTopMost.Size = new System.Drawing.Size(151, 22);
-			this.toolStripMenuItemTopMost.Text = "Top Most";
-			this.toolStripMenuItemTopMost.CheckedChanged += new System.EventHandler(this.toolStripMenuItemTopMost_CheckedChanged);
+			this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
 			// 
 			// toolStripMenuItem4
 			// 
@@ -253,7 +221,8 @@
             this.toolStripStatusLabelRefreshTime});
 			this.statusStripRefreshTime.Location = new System.Drawing.Point(0, 475);
 			this.statusStripRefreshTime.Name = "statusStripRefreshTime";
-			this.statusStripRefreshTime.Size = new System.Drawing.Size(516, 22);
+			this.statusStripRefreshTime.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+			this.statusStripRefreshTime.Size = new System.Drawing.Size(543, 22);
 			this.statusStripRefreshTime.TabIndex = 7;
 			this.statusStripRefreshTime.Text = "statusStrip1";
 			// 
@@ -271,7 +240,7 @@
 			this.formsPlot1.Location = new System.Drawing.Point(0, 0);
 			this.formsPlot1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
 			this.formsPlot1.Name = "formsPlot1";
-			this.formsPlot1.Size = new System.Drawing.Size(516, 120);
+			this.formsPlot1.Size = new System.Drawing.Size(543, 120);
 			this.formsPlot1.TabIndex = 8;
 			// 
 			// splitContainer1
@@ -291,19 +260,18 @@
 			// 
 			this.splitContainer1.Panel2.Controls.Add(this.formsPlot1);
 			this.splitContainer1.Panel2MinSize = 0;
-			this.splitContainer1.Size = new System.Drawing.Size(516, 450);
+			this.splitContainer1.Size = new System.Drawing.Size(543, 450);
 			this.splitContainer1.SplitterDistance = 326;
 			this.splitContainer1.TabIndex = 9;
 			// 
 			// FormMain
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(516, 497);
+			this.ClientSize = new System.Drawing.Size(543, 497);
 			this.Controls.Add(this.splitContainer1);
 			this.Controls.Add(this.statusStripRefreshTime);
 			this.Controls.Add(this.menuStrip1);
-			this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -336,14 +304,11 @@
 		private MenuStrip menuStrip1;
 		private ToolStripMenuItem toolStripMenuItem1;
 		private ToolStripMenuItem toolStripMenuItem2;
-		private ToolStripMenuItem editListToolStripMenuItem;
 		private ToolStripMenuItem inportToolStripMenuItem;
 		private ToolStripMenuItem exportToolStripMenuItem;
 		private StatusStrip statusStripRefreshTime;
 		private ToolStripStatusLabel toolStripStatusLabelRefreshTime;
 		private ToolStripMenuItem toolStripMenuItem3;
-		private ToolStripMenuItem toolStripMenuItemAutoRefresh;
-		private ToolStripMenuItem toolStripMenuItemTopMost;
 		private ToolStripMenuItem toolStripMenuItem4;
 		private ColumnHeader columnHeader6;
 		private ColumnHeader columnHeader7;
