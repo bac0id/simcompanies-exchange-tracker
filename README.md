@@ -19,7 +19,7 @@ The Exchange Tracker of the [Sim Companies](https://www.simcompanies.com/) on .N
 
 ## Useful links
 
-- [Product ID list](https://simcompanies.proboards.com/thread/61/product-reference-numbers)
+- [Product ID list]docs/product-id-list.md)
 
 ## License
 
