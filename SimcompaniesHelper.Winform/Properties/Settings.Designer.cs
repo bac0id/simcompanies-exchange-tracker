@@ -58,5 +58,29 @@ namespace SimcompaniesHelper.Winform.Properties {
                 this["AutoRefresh"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("559")]
+        public int MainFormWidth {
+            get {
+                return ((int)(this["MainFormWidth"]));
+            }
+            set {
+                this["MainFormWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("536")]
+        public int MainFormHeight {
+            get {
+                return ((int)(this["MainFormHeight"]));
+            }
+            set {
+                this["MainFormHeight"] = value;
+            }
+        }
     }
 }

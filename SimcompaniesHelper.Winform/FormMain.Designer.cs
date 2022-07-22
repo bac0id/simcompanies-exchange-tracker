@@ -83,6 +83,7 @@
 			this.lvPriceListView.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.lvPriceListView.FullRowSelect = true;
 			this.lvPriceListView.GridLines = true;
+			listViewItem1.StateImageIndex = 0;
 			this.lvPriceListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2});
@@ -278,6 +279,7 @@
 			this.Name = "FormMain";
 			this.Text = "Sim Companies Exchange Tracker";
 			this.TopMost = true;
+			this.ResizeEnd += new System.EventHandler(this.FormMain_ResizeEnd);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.statusStripRefreshTime.ResumeLayout(false);

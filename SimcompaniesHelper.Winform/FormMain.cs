@@ -11,6 +11,8 @@ namespace SimcompaniesHelper.Winform {
 		private Exchange exchange = Exchange.Singleton;
 		private ExchangePriceListView priceListVIew;
 
+		private const bool DebugFlag = false;
+
 		public FormMain() {
 			InitializeComponent();
 			this.priceListVIew = new ExchangePriceListView(lvPriceListView, exchange, followIds);
@@ -20,7 +22,7 @@ namespace SimcompaniesHelper.Winform {
 			LoadFollowIds();
 			this.priceListVIew.Ids = followIds;
 			LoadTimer();
-			LoadFormTopMost();
+			LoadMainFormConfig();
 		}
 
 		private void timerRefreshExchange_Tick(object sender, EventArgs e) {
@@ -46,8 +48,10 @@ namespace SimcompaniesHelper.Winform {
 			this.timerRefreshExchange.Enabled = Settings.Default.AutoRefresh;
 		}
 
-		private void LoadFormTopMost() {
+		private void LoadMainFormConfig() {
 			this.TopMost = Settings.Default.TopMost;
+			this.Width = Settings.Default.MainFormWidth;
+			this.Height = Settings.Default.MainFormHeight;
 		}
 
 		private void UpdateExchangePriceListView() {
@@ -127,6 +131,12 @@ namespace SimcompaniesHelper.Winform {
 			this.TopMost = topMost;
 
 			return result;
+		}
+
+		private void FormMain_ResizeEnd(object sender, EventArgs e) {
+			Settings.Default.MainFormWidth = this.Width;
+			Settings.Default.MainFormHeight = this.Height;
+			Settings.Default.Save();
 		}
 	}
 }

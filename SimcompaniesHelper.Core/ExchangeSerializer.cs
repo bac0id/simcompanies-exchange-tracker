@@ -10,13 +10,17 @@
 	/// </summary>
 	public static class ExchangeSerializer {
 		public static void Serialize(string filename, Exchange exchange) {
+			if (string.IsNullOrWhiteSpace(filename) || exchange == null) {
+				throw new ArgumentNullException();
+			}
+
 			FileStream fs = new FileStream(filename, FileMode.OpenOrCreate);
 			StreamWriter sw = new StreamWriter(fs);
 
 			sw.WriteLine(exchange.LastRefreshTime.Ticks);
 			sw.WriteLine(exchange.Products.Values.Count);
 			foreach (var product in exchange.Products.Values) {
-				sw.Write($"{product.Id} {product.Name} {product.Price}");
+				sw.Write($"{product.Id} {product.Name} {product.Price} {product.Statistics.HistoricalMin} {product.Statistics.HistoricalMax}");
 				foreach (var val in product.Statistics.RecentVals) {
 					sw.Write($" {val}");
 				}
@@ -26,7 +30,7 @@
 		}
 
 		public static void Deserialize(string filename, Exchange exchange) {
-			if (exchange == null) {
+			if (string.IsNullOrWhiteSpace(filename) || exchange == null) {
 				throw new ArgumentNullException();
 			}
 
@@ -42,11 +46,16 @@
 				int id = int.Parse(fields[0]);
 				string name = fields[1];
 				double price = double.Parse(fields[2]);
+				double min = double.Parse(fields[3]);
+				double max = double.Parse(fields[4]);
 
 				Product p = new Product(id, name, price);
+				// Bug: may cause inaccurate statistics
+				p.Price = min;
+				p.Price = max;
 
 				// Insert all recent prices
-				for (int j = 3; j < fields.Length; ++j) {
+				for (int j = 5; j < fields.Length; ++j) {
 					p.Price = double.Parse(fields[j]);
 				}
 
