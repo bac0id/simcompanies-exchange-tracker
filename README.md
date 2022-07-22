@@ -17,6 +17,10 @@ The Exchange Tracker of the [Sim Companies](https://www.simcompanies.com/) on .N
 3. Run the executive file. 
 4. If you wanna quit but save the recorded prices so far, click "Data-Save history" menu in program. If you wanna retrieve this data, click "Data-Load history".
 
+## Useful links
+
+- [Product ID list](https://simcompanies.proboards.com/thread/61/product-reference-numbers)
+
 ## License
 
 This repository is under MIT License. 
