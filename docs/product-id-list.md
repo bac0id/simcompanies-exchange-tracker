@@ -1,5 +1,14 @@
 # Product Id List
 
+# Overview
+
+The list of id (aka. reference number, kind id or db key) of all 140 products in game. 
+
+- [Numerical Order](product-id-list.md#numerical-order)
+- [Alphabetical Order](product-id-list.md#alphabetical-order)
+
+Last update: 2022/7/20
+
 ## Numerical Order
 
 |Name|Id|
