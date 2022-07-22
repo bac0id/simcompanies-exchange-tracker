@@ -4,10 +4,16 @@ The Exchange Tracker of the [Sim Companies](https://www.simcompanies.com/) on .N
 
 ![screenshot](screenshot-1.png)
 
+## Features
+
+- Auto refresh the exchange information, with customizable time interval.
+- Customize the list of your favourite products.
+- Record recent and historic lowest/highest price.
+- Change the color of text to notify if the current price of a product is lower than min/average price.
+
 ## How to use
 
-1. Unzip the [releases file](https://github.com/bac0id/simcompanies-exchange-tracker/releases). 
-2. Modify `follow_list.txt`. Write the id of product that you wanna track. One Id in one line. 
+1. Unzip the [releases file](https://github.com/bac0id/simcompanies-exchange-tracker/releases).
 3. Run the executive file. 
 4. If you wanna quit but save the recorded prices so far, click "Data-Save history" menu in program. If you wanna retrieve this data, click "Data-Load history".
 
