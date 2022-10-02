@@ -22,7 +22,7 @@ The Exchange Tracker of the [Sim Companies](https://www.simcompanies.com/) on .N
 
 ## Useful links
 
-- [Product ID list](docs/product-id-list.md)
+- [Product ID Table](docs/product-id-list.md)
 
 ## License
 
