@@ -1,6 +1,6 @@
 #  Sim Companies Exchange Tracker
 
-The Exchange Tracker of the [Sim Companies](https://www.simcompanies.com/) on .NET 6.0 platform, based on [Web API](https://www.simcompanies.com/articles/api). 
+The Real-time Exchange Tracker of the [Sim Companies](https://www.simcompanies.com/) on .NET 6.0 platform, based on [Web API](https://www.simcompanies.com/articles/api). 
 
 ![screenshot](screenshot-1.png)
 
