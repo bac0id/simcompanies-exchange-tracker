@@ -38,7 +38,7 @@ This repository is under MIT License.
 
 ![icon](https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/favicon.ico)
 
-The icon of executive file is licensed by Sim Companies. 
+The icon of executive file is a trademark of [Sim Companies](https://www.simcompanies.com) and is licensed by its company. 
 
 ## References
 
